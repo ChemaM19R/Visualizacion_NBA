@@ -1,0 +1,4 @@
+Debido a problemas de tamaño de los archivos (datsets) no los he podido adjuntar en la entrega.
+De todas formas los he sacado de kaggle de este enlace: https://www.kaggle.com/datasets/eoinamoore/historical-nba-data-and-player-box-scores?select=PlayerStatistics.csv
+Los archivos necesarios son Players.csv y PlayersStatistics.csv, este último archivo a pesar de ser comprimido pesa más de 50 MB (unos 350 en total)
+Por ello en la entrega solo soy capaz de adjuntar el primero de Players.csv
