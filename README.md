@@ -1,5 +1,5 @@
 # Visualizacion_NBA
-Este repositorio contiene un datset de datos nba extraído de Kaggle y un análisis y visualización de los mismos
+Este repositorio contiene un dataset de datos nba extraído de Kaggle y un análisis y visualización de los mismos
 
 ## Acceso a los datos
 Los datos se encuentran en el archivo Players.csv y el otro archivo hay que descargarlo desde kaggle, leer el datasets.txt para más información.
