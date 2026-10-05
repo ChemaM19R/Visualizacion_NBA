@@ -226,13 +226,13 @@ body { margin: 0; background: __FONDO__; color: __TINTA__; font-family: __TEXTO_
 
 /* Contenido */
 .contenido { max-width: 1400px; margin: 0 auto; padding: 0 32px 48px; }
-.panel { background: __PANEL__; border: 1px solid __LINEA__; border-radius: 4px; padding: 18px 20px; }
-.barra-temporada { margin-top: -1px; border-top: none; border-radius: 0 0 4px 4px; padding: 16px 28px 30px; }
+.panel { background: __PANEL__; border: 1px solid __LINEA__; border-radius: 12px; padding: 18px 20px; }
+.barra-temporada { margin-top: -1px; border-top: none; border-radius: 0 0 4px 4px; padding: 16px 28px 30px; background: #FCEDE7;}
 .etiqueta { font-weight: 600; font-size: 14px; margin-bottom: 8px; }
 .nota { font-size: 13px; color: __SUAVE__; line-height: 1.5; padding: 0 4px; }
 
 /* Filtros plegables */
-.filtros { margin-top: 16px; padding: 0; }
+.filtros { margin-top: 16px; padding: 0; background: #FCEDE7;}
 .filtros > summary { cursor: pointer; list-style: none; padding: 14px 20px; display: flex;
                      align-items: center; gap: 10px; font-family: __TITULOS__; font-size: 21px; font-weight: 600; }
 .filtros > summary::-webkit-details-marker { display: none; }
@@ -253,7 +253,7 @@ body { margin: 0; background: __FONDO__; color: __TINTA__; font-family: __TEXTO_
 .boton:focus-visible, summary:focus-visible { outline: 2px solid __BALON__; outline-offset: 2px; }
 
 /* Marcador de KPIs */
-.kpis { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 16px; padding: 0; }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 16px; padding: 0; background: #FCEDE7; }
 .kpi { padding: 18px 24px 16px; border-left: 1px solid __LINEA__; }
 .kpi:first-child { border-left: none; }
 .kpi-titulo { color: __SUAVE__; font-size: 14px; }
@@ -262,8 +262,8 @@ body { margin: 0; background: __FONDO__; color: __TINTA__; font-family: __TEXTO_
 .kpi-delta { font-size: 13px; margin-top: 6px; }
 
 /* Gráficos */
-.graficos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 16px; margin-top: 16px; }
-.panel-grafico { padding: 14px 16px 10px; }
+.graficos { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 16px; margin-top: 16px;}
+.panel-grafico { padding: 14px 16px 10px; background: #FCEDE7;}
 .mariposa { margin-top: 16px; }
 
 /* Sliders (rc-slider, el que usa dcc.Slider) */
@@ -364,8 +364,7 @@ app.layout = html.Div([
         ]),
 
         html.Details(className="panel filtros", open=True, children=[
-            html.Summary(["Filtros",
-                          html.Span("Equipo, jugador y medias por partido", className="resumen")]),
+            html.Summary(["Filtros"]),
             html.Div(className="filtros-cuerpo", children=[
                 html.Div(className="fila-desplegables", children=[
                     html.Div([
@@ -498,7 +497,7 @@ def figura_mapa(d, temporada, seleccion=None):
 
     fig.update_layout(
         clickmode="event",
-        title=dict(text="Dónde se formaron" + subtitulo_grafico(
+        title=dict(text="¿Dónde se formaron?" + subtitulo_grafico(
             "Estado o país en el que se formaron antes de llegar a la NBA, no donde nacieron.")),
         coloraxis=dict(
             colorscale=ESCALA_MAPA, cmin=0, cmax=np.log10(MAX_JUG),
